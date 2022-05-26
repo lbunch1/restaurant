@@ -1,5 +1,6 @@
 import createHome from "./home";
 import './style.css';
+import Avocado from './avocado.svg';
 
 function createHeader() {
     const header = document.createElement("header");

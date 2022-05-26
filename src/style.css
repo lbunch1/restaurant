@@ -11,7 +11,7 @@ body {
 
 header {
     text-align:center;
-    background-color: rgb(49, 133, 21);
+    background-color: #5fdf30;
     color:white;
 }
 
@@ -26,7 +26,7 @@ nav>a {
     text-decoration: none;
     font-weight: 600;
     padding:1em;
-    color: white
+    color: white;
 }
 
 nav>a:hover {
@@ -34,15 +34,20 @@ nav>a:hover {
 }
 
 main {
+    display: flex;
+    justify-content: center;
     text-align: center;
+    background-image: url('./img/wave.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position-x:center;
+    background-position-y: bottom;
+    margin-bottom: -5px;
 }
 
 footer {
     display:flex;
-    align-items:flex-end;
     justify-content: center;
-    background-image: url('./img/wave.svg');
-    background-repeat: none;
-    background-size: cover;
     color: white;
+    background-color: #5fdf30;
 }

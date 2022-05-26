@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    display: grid;
+    grid-template-rows: 6em 3em 1fr 5em;
+    min-height: 100vh;
+    margin:0;
+    padding:0;
+}
+
+header {
+    text-align:center;
+    background-color: rgb(49, 133, 21);
+    color:white;
+}
+
+nav {
+    display: flex;
+    flex-wrap: 0;
+    justify-content: center;
+    background-color: rgb(73, 194, 33);
+}
+
+nav>a {
+    text-decoration: none;
+    font-weight: 600;
+    padding:1em;
+    color: white
+}
+
+nav>a:hover {
+    background-color: rgb(94, 220, 52);
+}
+
+main {
+    text-align: center;
+}
+
+footer {
+    display:flex;
+    align-items:flex-end;
+    justify-content: center;
+    background-image: url('./img/wave.svg');
+    background-repeat: none;
+    background-size: cover;
+    color: white;
+}

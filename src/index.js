@@ -1,20 +1,46 @@
 import createHome from "./home";
+import createMenu from "./menu";
+import createAbout from "./about";
 import './style.css';
-import Avocado from './avocado.svg';
+import Title from "./img/title.svg";
+import avotoast from "./img/avotoast.jpg";
+
 
 function createHeader() {
     const header = document.createElement("header");
-    header.innerHTML = "<h1>Vegan Restaurant Website</h1>";
+    const img = new Image();
+    img.src = Title;
+    img.alt = "Veg Place";
+    header.appendChild(img);
     return header;
 };
 
 function createNav() {
+
+    const buttonEvent = function (name) {
+        body.innerHTML = "";
+        const clearActive = document.querySelectorAll("nav>a");
+        clearActive.forEach(element => element.classList.remove("active"));
+        switch (name) {
+            case 'home':
+                body.appendChild(createHome());
+                break;
+            case 'menu':
+                body.appendChild(createMenu());
+                break;
+            case 'about':
+                body.appendChild(createAbout());
+                break;
+        }
+    }
 
     const createNavLink = function(name){
         const button = document.createElement("a");
         button.setAttribute("id", name);
         button.setAttribute("href", "#");
         button.innerHTML = `${name[0].toUpperCase()}${name.slice(1)}`;
+        button.addEventListener("click", () => buttonEvent(button.id));
+        button.addEventListener("click", () => button.classList.add("active"));
         return button;
     };
 
